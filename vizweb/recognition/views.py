@@ -43,3 +43,8 @@ def index(request):
     else:
         form = ImageForm()
     return render(request, "index.html", {"form": form})
+
+
+def history(request):
+    image_objects = Image.objects.all().order_by("-uploaded_at")
+    return render(request, "history.html", {"image_objects": image_objects})

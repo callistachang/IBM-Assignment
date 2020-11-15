@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3 class="mb-3">Image Upload History</h3>
+
+<table class="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Image</th>
+            <th scope="col">Top Class/Score</th>
+            <th scope="col">Uploaded At</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for image_object in image_objects %}
+        <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td><a href="{{ image_object.image.url }}" target="_blank">{{ image_object.image.name }}</a></td>
+            <td>{{ image_object.labels.first.label }}/{{ image_object.labels.first.score }}</td>
+            <td>{{ image_object.uploaded_at }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
