@@ -19,7 +19,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("", include("recognition.urls")),
+    path("admin/", admin.site.urls),
 ]
 
 # if the server is in development mode, the uploaded images will be uploaded to a local /media folder
