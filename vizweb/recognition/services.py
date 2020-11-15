@@ -11,4 +11,3 @@ visual_recognition.set_service_url(os.getenv("IBM_VR_URL"))
 
 # usage:
 # recognition_result = visual_recognition.classify(url={url}).get_result()
-# json.dumps(recognition_result)
