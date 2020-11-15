@@ -11,7 +11,6 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterModelOptions(
-            name="imagelabel",
-            options={"ordering": ["-score"]},
+            name="imagelabel", options={"ordering": ["-score"]},
         ),
     ]
