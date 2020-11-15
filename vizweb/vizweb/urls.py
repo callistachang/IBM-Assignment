@@ -22,7 +22,3 @@ urlpatterns = [
     path("", include("recognition.urls")),
     path("admin/", admin.site.urls),
 ]
-
-# if the server is in development mode, the uploaded images will be uploaded to a local /media folder
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
