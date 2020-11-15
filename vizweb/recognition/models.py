@@ -18,3 +18,9 @@ class Image(models.Model):
     def get_image_extension(self):
         _, extension = os.path.splitext(self.image.name)
         return extension
+
+
+class ImageLabel(models.Model):
+    image = models.ForeignKey(Image, on_delete=models.CASCADE, related_name='labels')
+    label = models.CharField(max_length=50)
+    score = models.FloatField()
