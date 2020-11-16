@@ -12,7 +12,7 @@ Built with Django 3.1.
 
 #### 1. Set up environment variables
 
-Replace the variables in `.env.example` with your own values and rename the file to `.env`.
+Replace the variables in `.env.example` with your own values and rename the file to `.env`. You must own IBM Cloud and AWS accounts and activate their [Visual Recognition](https://www.ibm.com/cloud/watson-visual-recognition) and [S3](https://aws.amazon.com/s3/) services respectively.
 
 #### 2. Download Dependencies
 
