@@ -4,7 +4,9 @@ Built with Django 3.1.
 
 ## Video Demonstration
 
-[here](https://ibm-vizapp.s3.us-east-2.amazonaws.com/video-demo.mp4)
+[Web demo](https://entuedu-my.sharepoint.com/:v:/g/personal/call0001_e_ntu_edu_sg/EQwF2diFVwJFvMdn0Y26m0UBnrZ8E5d0UxrmSwzOmEiXkQ?e=CNEgmh)
+
+[Mobile demo](https://entuedu-my.sharepoint.com/:v:/g/personal/call0001_e_ntu_edu_sg/EajjEoioLuFHrPopQgWGcX0BBFMrAosmwnlo3cQS8yDNQQ?e=h6pfqr)
 
 ## Local Setup Instructions
 
@@ -20,13 +22,13 @@ Download Poetry [here](https://python-poetry.org/docs/#installation) first.
 
 ```
 cd vizweb
-poetry install
-poetry shell
+poetry install # create virtual environment and download dependencies
+poetry shell   # activate virtual environment
 ```
 
 <ins>With Pip as a package manager</ins>
 
-Create a virtual environment first (optional).
+Create and activate a virtual environment first with instructions [here](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/) (optional).
 
 ```
 cd vizweb
@@ -36,7 +38,6 @@ pip install -r requirements.txt
 #### 3. Migrate Database Schema
 
 ```
-cd vizweb
 python manage.py makemigrations
 python manage.py migrate
 ```
@@ -44,6 +45,5 @@ python manage.py migrate
 #### 4. Start Local Server (Port 8000)
 
 ```
-cd vizweb
 python manage.py runserver
 ```
