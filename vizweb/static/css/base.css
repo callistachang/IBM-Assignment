@@ -1,9 +1,20 @@
-.main-content {
-    padding: 2em 5em;
+#id_image {
+  border: 3px dotted #343a40;
+  display: inline-block;
+  padding: 0.5em;
 }
 
-#id_image {
-    border: 3px dotted #343a40;
-    display: inline-block;
-    padding: 0.5em;
+.main-content {
+  padding: 2em;
+}
+
+.uploaded-image {
+  max-height: 300px;
+}
+
+@media (max-width: 576px) {
+  .uploaded-image {
+    width: 80%;
+    height: auto;
+  }
 }
